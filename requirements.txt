@@ -1,0 +1,5 @@
+tqdm==4.61.0
+transformers==4.8.2
+torch==1.9.0
+torch_geometric==1.7.2
+numpy==1.18.3
