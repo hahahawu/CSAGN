@@ -1,3 +1,5 @@
+import copy
+
 
 def load_file(path):
     with open(path, 'r', encoding='utf-8') as fr:
@@ -25,6 +27,7 @@ def load_vocab(path, symbol_idx=None):
 
 
 def bert_vectorize_data(tokenizer, data, label_vocab, seg_type_id_map, mode="training", use_seg=False):
+    data = copy.deepcopy(data)
     if mode == "training":
         sent_id, pred_idx, words, dialog_turns, labels = data
         label_vec = []
